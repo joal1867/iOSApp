@@ -73,4 +73,19 @@ class TheaterListTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 120
     }
+    
+    //셀을 선택했을 때 호출되는 메소드 : TheaterMapVC를 화면에 출력하고 데이터 넘겨주기
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        //선택한 행번호에 해당하는 데이터 찾아오기
+        let theater = self.data[indexPath.row]
+        //하위 뷰 컨트롤러 인스턴스 생성
+        let theaterMapVC = self.storyboard?.instantiateViewController(withIdentifier: "TheaterMapVC") as? TheaterMapVC
+        //데이터 넘겨주기
+        theaterMapVC?.theater = theater
+        //비동기적으로 푸시
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(theaterMapVC!, animated: true)
+        }
+       
+    }
 }

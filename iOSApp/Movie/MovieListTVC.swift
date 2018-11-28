@@ -162,13 +162,12 @@ class MovieListTVC: UITableViewController {
         //선택한 행번호에 해당하는 데이터 찾아오기
         let movie = self.list[indexPath.row]
         //하위 뷰 컨트롤러 인스턴스 생성
-        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieDetailVC") as? MovieDetailVC
+        let movieDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "MovieDetailVC") as? MovieDetailVC
         //데이터 넘겨주기
-        detailViewController?.linkUrl = movie.linkUrl
-        detailViewController?.title = movie.title
+        movieDetailVC?.linkUrl = movie.linkUrl
+        movieDetailVC?.title = movie.title
         //네비게이션으로 출력
         self.navigationController?.pushViewController(
-            detailViewController!, animated: true)
+            movieDetailVC!, animated: true)
     }
-
 }

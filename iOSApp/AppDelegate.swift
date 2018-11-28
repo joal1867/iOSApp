@@ -1,17 +1,12 @@
-//
-//  AppDelegate.swift
-//  iOSApp
-//
-//  Created by Joal on 26/11/2018.
-//  Copyright © 2018 Joal. All rights reserved.
-//
 
 import UIKit
 import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    //MemoListVO클래스 - 인스턴스 변수의 배열 생성
+    var memoList = [MemoListVO]()
+    
     var window: UIWindow?
 
 
