@@ -6,6 +6,7 @@ class MemoFormVC: UIViewController {
     @IBOutlet weak var memoImage: UIImageView!
     @IBOutlet weak var txtContents: UITextView!
     
+    
     //이미지 피커의 타입을 매개변수로 받아 이미지 피커를 출력해주는 사용자정의 메소드
     func presentPicker(source : UIImagePickerController.SourceType){
         //유효한 SourceType이 아니면 중단
@@ -36,11 +37,44 @@ class MemoFormVC: UIViewController {
         self.present(select,animated: true)
     }
     
+    
     //제목을 저장할 인스턴스 변수 선언
     var subject : String!
+    
+    
     //디자인 navigation bar Item 1개(메모저장) 이벤트 메소드와 연결
+    //입력받은 데이터를 AppDelegate의 memoList에 저장 
     @IBAction func saveMemo(_ sender: Any) {
+        //텍스트 뷰에 내용이 없으면 경고창을 출력하고 종료
+        //조건을 만족하지 않으면 종료 : guard 사용
+        //cf. 조건에 마자는 경우와 그렇지 않은 경우에 다른 처리 : if 사용
+        
+        //contents에 내용이 없으면 리턴
+        guard self.txtContents.text.isEmpty == false else{
+            let alert = UIAlertController(title: "텍스트 뷰에 내용을 작성해야 합니다. ", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "확인", style: .default))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        //입력한 문자열이 있는 경우 데이터를 생성
+        let memo = MemoListVO()
+        memo.title = self.subject
+        memo.contents = self.txtContents.text
+        memo.image = self.memoImage.image
+        memo.regdate = Date()
+        print("memo:\(memo)")
+        
+        //데이터 변수를 소유하고 있는 AppDelegate 인스턴스에 대한 포인터 생성
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //데이터 저장 : 이 작업 후에 memo데이터를 Core Data나 Server에 저장하고 다시 출력
+        appDelegate.memoList.append(memo)
+        print("memoList:\(appDelegate.memoList)")
+        
+        //이전 뷰 컨트롤러로 돌아가기
+        self.navigationController?.popViewController(animated: true)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +82,7 @@ class MemoFormVC: UIViewController {
 
     }
 }
+
 
 //UIImagePickerControllerDelegate, UITextViewDelegate
 extension MemoFormVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate{

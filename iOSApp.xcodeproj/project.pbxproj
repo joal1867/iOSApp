@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D23CB3C21AF74D50002DA5F /* MemoCell.swift */; };
 		4D2F4B3F21AD094F00457D9C /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F4B3E21AD094F00457D9C /* MovieDetailVC.swift */; };
 		4D2F4B4121AD0CCF00457D9C /* TheaterListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F4B4021AD0CCF00457D9C /* TheaterListTVC.swift */; };
 		4D2F4B4421AD123000457D9C /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F4B4321AD123000457D9C /* TheaterCell.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D23CB3C21AF74D50002DA5F /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		4D2F4B3E21AD094F00457D9C /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		4D2F4B4021AD0CCF00457D9C /* TheaterListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListTVC.swift; sourceTree = "<group>"; };
 		4D2F4B4321AD123000457D9C /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
@@ -59,6 +61,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D23CB3E21AF98E50002DA5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D23CB3F21AF98FE0002DA5F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4D23CB3F21AF98FE0002DA5F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		4D6A775521AB86F8005FDD51 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,7 @@
 				4D6A776D21AB86FA005FDD51 /* LaunchScreen.storyboard */,
 				4D6A777021AB86FA005FDD51 /* Info.plist */,
 				4D6A776821AB86F8005FDD51 /* iOSApp.xcdatamodeld */,
+				4D23CB3E21AF98E50002DA5F /* Resources */,
 				4DB4BE6421AE608B006D8503 /* Memo */,
 				4DB4BE5B21AE2C6C006D8503 /* Movie */,
 				4DB4BE5A21AE2C32006D8503 /* Theater */,
@@ -116,6 +134,7 @@
 		4DB4BE6421AE608B006D8503 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				4D23CB3C21AF74D50002DA5F /* MemoCell.swift */,
 				4DB4BE5E21AE30C7006D8503 /* MemoListTVC.swift */,
 				4DB4BE6021AE4047006D8503 /* MemoFormVC.swift */,
 				4DB4BE6221AE6082006D8503 /* MemoDetailVC.swift */,
@@ -206,6 +225,7 @@
 				4DB4BE6621AE6964006D8503 /* MemoListVO.swift in Sources */,
 				4DB4BE6321AE6082006D8503 /* MemoDetailVC.swift in Sources */,
 				4D6A777721AB880E005FDD51 /* MovieListTVC.swift in Sources */,
+				4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */,
 				4D2F4B4121AD0CCF00457D9C /* TheaterListTVC.swift in Sources */,
 				4D6A777921AB9AD2005FDD51 /* MovieListVO.swift in Sources */,
 				4D6A776A21AB86F8005FDD51 /* iOSApp.xcdatamodeld in Sources */,
