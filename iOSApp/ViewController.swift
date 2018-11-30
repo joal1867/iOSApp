@@ -46,6 +46,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "iOS App"
+        
+        //네비게이션 바의 왼쪽에 사이드 메뉴를 호출하는 바 버튼 아이템을 추가하는 작업
+        if let revealVC = self.revealViewController(){
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named:"sidemenu.png")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            self.navigationItem.leftBarButtonItem = btn
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
     }
 }
 
