@@ -74,11 +74,17 @@ class MemoFormVC: UIViewController {
         memo.regdate = Date()
         print("memo:\(memo)")
         
+        //*Data를 저장하는 방법1) 변수에 저장 : 앱이 종료되면 메모도 사라집니다. 
         //데이터 변수를 소유하고 있는 AppDelegate 인스턴스에 대한 포인터 생성
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
         //데이터 저장 : 이 작업 후에 memo데이터를 Core Data나 Server에 저장하고 다시 출력
-        appDelegate.memoList.append(memo)
-        print("memoList:\(appDelegate.memoList)")
+        //appDelegate.memoList.append(memo)
+        //print("memoList:\(appDelegate.memoList)")
+        
+        //*Data를 저장하는 방법2) CoreData에 저장
+        //DAO메소드 호출
+        let dao = MemoDAO()
+        dao.insert(memo)
         
         //이전 뷰 컨트롤러로 돌아가기
         self.navigationController?.popViewController(animated: true)

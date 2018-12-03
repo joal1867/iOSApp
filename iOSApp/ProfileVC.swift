@@ -69,7 +69,6 @@ class ProfileVC: UIViewController, UITableViewDelegate,UITableViewDataSource {
             default:
                 ()
         }
-        
         return cell
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0CA3CC21B4FA4500E4A4B8 /* MemoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0CA3CB21B4FA4500E4A4B8 /* MemoDAO.swift */; };
 		4D1653D521B4B343002D9B41 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1653D421B4B343002D9B41 /* ProfileVC.swift */; };
 		4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D23CB3C21AF74D50002DA5F /* MemoCell.swift */; };
 		4D23CBAB21B1082E0002DA5F /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D23CB9921B1082A0002DA5F /* note.png */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0CA3CB21B4FA4500E4A4B8 /* MemoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDAO.swift; sourceTree = "<group>"; };
 		4D1653D421B4B343002D9B41 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		4D23CB3C21AF74D50002DA5F /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		4D23CB9921B1082A0002DA5F /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				4D23CBC121B1136E0002DA5F /* SWRevealViewController.h */,
 				4D23CBC221B1136E0002DA5F /* SWRevealViewController.m */,
+				4D23CBC021B1136D0002DA5F /* iOSApp-Bridging-Header.h */,
 				4D6A776121AB86F8005FDD51 /* AppDelegate.swift */,
 				4D6A776321AB86F8005FDD51 /* ViewController.swift */,
 				4D6A776521AB86F8005FDD51 /* Main.storyboard */,
@@ -166,9 +169,7 @@
 				4D6A776B21AB86FA005FDD51 /* Assets.xcassets */,
 				4D6A776D21AB86FA005FDD51 /* LaunchScreen.storyboard */,
 				4D6A777021AB86FA005FDD51 /* Info.plist */,
-				4D6A776821AB86F8005FDD51 /* iOSApp.xcdatamodeld */,
 				4D23CBC421B115040002DA5F /* SideMenuTVC.swift */,
-				4D23CBC021B1136D0002DA5F /* iOSApp-Bridging-Header.h */,
 				4D23CB3E21AF98E50002DA5F /* Resources */,
 				4DB4BE6421AE608B006D8503 /* Memo */,
 				4DB4BE5B21AE2C6C006D8503 /* Movie */,
@@ -201,11 +202,13 @@
 		4DB4BE6421AE608B006D8503 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
+				4D6A776821AB86F8005FDD51 /* iOSApp.xcdatamodeld */,
 				4D23CB3C21AF74D50002DA5F /* MemoCell.swift */,
 				4DB4BE5E21AE30C7006D8503 /* MemoListTVC.swift */,
 				4DB4BE6021AE4047006D8503 /* MemoFormVC.swift */,
 				4DB4BE6221AE6082006D8503 /* MemoDetailVC.swift */,
 				4DB4BE6521AE6964006D8503 /* MemoListVO.swift */,
+				4D0CA3CB21B4FA4500E4A4B8 /* MemoDAO.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */,
 				4D2F4B4121AD0CCF00457D9C /* TheaterListTVC.swift in Sources */,
 				4D6A777921AB9AD2005FDD51 /* MovieListVO.swift in Sources */,
+				4D0CA3CC21B4FA4500E4A4B8 /* MemoDAO.swift in Sources */,
 				4D6A776A21AB86F8005FDD51 /* iOSApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

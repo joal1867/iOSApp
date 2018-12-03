@@ -24,9 +24,16 @@ class MemoListTVC: UITableViewController {
     //*데이터가 변경되면 재출력 요청 필요!
     //why? *GUI Programming에서는 View에 데이터를 직접 출력하는 경우가 거의 없습니다.
     //비동기적으로 이미지 출력
+    
     //뷰가 출력될 때 마다 호출되는 메소드
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //*데이터를 가져오는 작업 1)변수에 데이터 저장했을 경우
+        //self.tableView.reloadData()
+        
+        //*데이터를 가져오는 작업 2)CoreData에서 가져오는 작업
+        let dao = MemoDAO()
+        self.appDelegate.memoList = dao.fetch()
         self.tableView.reloadData()
     }
     
@@ -83,5 +90,24 @@ class MemoListTVC: UITableViewController {
         memoDetailVC.memo = memo
         //네비게이션으로 이동
         self.navigationController?.pushViewController(memoDetailVC, animated: true)
+    }
+    
+    //편집 기능을 실행할 때 보여질 버튼을 설정하는 메소드
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    //편집기능을 실행할 때 보여지는 버튼을 눌렀을 때 호출되는 메소드
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        //행번호에 해당하는 데이터 찾아오기
+        let data = self.appDelegate.memoList[indexPath.row]
+        let dao = MemoDAO()
+        //Core Data에서 삭제
+        if dao.delete(data.objectID!){
+            //메모리에서도 삭제
+            self.appDelegate.memoList.remove(at: indexPath.row)
+            //행번호에 해당하는 데이터를 삭제하는 애니메이션을 수행 
+            self.tableView.deleteRows(at: [indexPath], with: .left)
+        }
     }
 }
