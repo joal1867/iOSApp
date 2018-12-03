@@ -11,12 +11,21 @@ class MemoDAO{
         return appDelegate.persistentContainer.viewContext
     }()
     
+    
     //전체 데이터를 가져오는 메소드
-    func fetch() -> [MemoListVO]{
+    //search Bar를 이용한 검색구현
+    //ㄴ매개변수로 조회할 문자열을 대입받고, 메소드를 호출할 때 조회할 문자열이 있으면 조건으로 추가하기
+    func fetch(keyword:String?=nil) -> [MemoListVO]{
         //리스트 생성
         var memoList = [MemoListVO]()
         //요청객체 생성
         let fetchRequest:NSFetchRequest<MemoMO> = MemoMO.fetchRequest()
+        
+        //검색조건이 있는 경우 검색 조건 추가
+        if let t = keyword, t.isEmpty==false{
+            fetchRequest.predicate = NSPredicate(format:"contents CONTAINS[c] %@",t)
+        }
+        
         //2개이상의 데이터를 가져올 때는 정렬조건을 추가
         let regDataDesc = NSSortDescriptor(key:"regdate", ascending:false)
         fetchRequest.sortDescriptors = [regDataDesc]
@@ -46,6 +55,7 @@ class MemoDAO{
         return memoList
     }
     
+    
     //데이터를 삽입하는 메소드
     func insert(_ data:MemoListVO){
         //새로 저장할 객체를 생성
@@ -64,6 +74,7 @@ class MemoDAO{
             print("\(e.localizedDescription)")
         }
     }
+    
     
     //삭제하는 메소드
     func delete(_ objectID: NSManagedObjectID) -> Bool{

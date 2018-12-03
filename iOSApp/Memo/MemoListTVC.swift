@@ -13,11 +13,19 @@ class MemoListTVC: UITableViewController {
     //AppDelegate객체에 대한 참조형 변수를 인스턴스 변수로 생성
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    //디자인 SearchBar 1개와 변수연결
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //네비게이션 바 우측에 + 버튼 배치
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(MemoListTVC.add(_:)))
+        
+        
+        //searchBar의 delegate 설정
+        searchBar.delegate = self
+        searchBar.enablesReturnKeyAutomatically = false
     }
     
     
@@ -46,10 +54,12 @@ class MemoListTVC: UITableViewController {
         return 1
     }
     
+    
     //그룹별 행의 개수를 설정하는 메소드
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appDelegate.memoList.count
     }
+    
     
     //셀을 만들어주는 메소드
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,10 +86,12 @@ class MemoListTVC: UITableViewController {
         return cell
     }
     
+    
     //셀의 높이를 설정하는 메소드
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
     
     //셀을 선택했을 때 호출되는 메소드 재정의
     //ㄴ셀을 선택했을 때 하위 뷰 컨트롤러에게 데이터를 넘겨주고 네비게이션으로 이동하는 작업
@@ -92,10 +104,12 @@ class MemoListTVC: UITableViewController {
         self.navigationController?.pushViewController(memoDetailVC, animated: true)
     }
     
+    
     //편집 기능을 실행할 때 보여질 버튼을 설정하는 메소드
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+    
     
     //편집기능을 실행할 때 보여지는 버튼을 눌렀을 때 호출되는 메소드
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
@@ -109,5 +123,16 @@ class MemoListTVC: UITableViewController {
             //행번호에 해당하는 데이터를 삭제하는 애니메이션을 수행 
             self.tableView.deleteRows(at: [indexPath], with: .left)
         }
+    }
+}
+
+//UISearchBarDelegate 프로토콜의 메소드를 구현하는 extension
+extension MemoListTVC : UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let keyword = searchBar.text
+        let dao = MemoDAO()
+        self.appDelegate.memoList = dao.fetch(keyword:keyword)
+        self.tableView.reloadData()
+        
     }
 }
