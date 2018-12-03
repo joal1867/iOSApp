@@ -65,4 +65,26 @@ class SideMenuTVC: UITableViewController {
 
         return cell
     }
+    
+    
+    //셀을 선택했을 때 호출되는 메소드
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            let uv = self.storyboard?.instantiateViewController(withIdentifier: "MemoFormVC") as! MemoFormVC
+            //사이드 바의 네비게이션 컨트롤러 찾아오기
+            let target = self.revealViewController()?.frontViewController as! UINavigationController
+            //화면 출력
+            target.pushViewController(uv, animated: true)
+            //사이드 바 제거
+            self.revealViewController()?.revealToggle(self)
+        }else if indexPath.row == 5{
+            let uv = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+            let target = self.revealViewController()?.frontViewController as! UINavigationController
+            //화면 출력
+            target.pushViewController(uv, animated: true)
+            //사이드 바 제거
+            self.revealViewController()?.revealToggle(self)
+        }
+    }
+    
 }

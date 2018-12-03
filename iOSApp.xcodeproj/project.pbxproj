@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1653D521B4B343002D9B41 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1653D421B4B343002D9B41 /* ProfileVC.swift */; };
 		4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D23CB3C21AF74D50002DA5F /* MemoCell.swift */; };
 		4D23CBAB21B1082E0002DA5F /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D23CB9921B1082A0002DA5F /* note.png */; };
 		4D23CBAC21B1082E0002DA5F /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D23CB9A21B1082B0002DA5F /* icon02.png */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D1653D421B4B343002D9B41 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		4D23CB3C21AF74D50002DA5F /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		4D23CB9921B1082A0002DA5F /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = note.png; sourceTree = "<group>"; };
 		4D23CB9A21B1082B0002DA5F /* icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02.png; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				4D6A776121AB86F8005FDD51 /* AppDelegate.swift */,
 				4D6A776321AB86F8005FDD51 /* ViewController.swift */,
 				4D6A776521AB86F8005FDD51 /* Main.storyboard */,
+				4D1653D421B4B343002D9B41 /* ProfileVC.swift */,
 				4D6A776B21AB86FA005FDD51 /* Assets.xcassets */,
 				4D6A776D21AB86FA005FDD51 /* LaunchScreen.storyboard */,
 				4D6A777021AB86FA005FDD51 /* Info.plist */,
@@ -309,6 +312,7 @@
 				4D23CBC521B115040002DA5F /* SideMenuTVC.swift in Sources */,
 				4DB4BE6321AE6082006D8503 /* MemoDetailVC.swift in Sources */,
 				4D6A777721AB880E005FDD51 /* MovieListTVC.swift in Sources */,
+				4D1653D521B4B343002D9B41 /* ProfileVC.swift in Sources */,
 				4D23CBC321B1136E0002DA5F /* SWRevealViewController.m in Sources */,
 				4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */,
 				4D2F4B4121AD0CCF00457D9C /* TheaterListTVC.swift in Sources */,
