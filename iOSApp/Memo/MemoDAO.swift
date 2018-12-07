@@ -36,6 +36,7 @@ class MemoDAO{
             for record in resultSet{
                 //1개의 데이터를 저장할 객체를 생성
                 let data = MemoListVO()
+                data.num = record.num
                 data.title = record.title
                 data.contents = record.contents
                 //날짜는 형변환 후, 저장

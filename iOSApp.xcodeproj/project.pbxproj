@@ -33,6 +33,7 @@
 		4D2F4B3F21AD094F00457D9C /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F4B3E21AD094F00457D9C /* MovieDetailVC.swift */; };
 		4D2F4B4121AD0CCF00457D9C /* TheaterListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F4B4021AD0CCF00457D9C /* TheaterListTVC.swift */; };
 		4D2F4B4421AD123000457D9C /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2F4B4321AD123000457D9C /* TheaterCell.swift */; };
+		4D5318BA21BA10BF008BD8E5 /* DataSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5318B921BA10BF008BD8E5 /* DataSync.swift */; };
 		4D6A776221AB86F8005FDD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A776121AB86F8005FDD51 /* AppDelegate.swift */; };
 		4D6A776421AB86F8005FDD51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A776321AB86F8005FDD51 /* ViewController.swift */; };
 		4D6A776721AB86F8005FDD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6A776521AB86F8005FDD51 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		4DB4BE6121AE4047006D8503 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4BE6021AE4047006D8503 /* MemoFormVC.swift */; };
 		4DB4BE6321AE6082006D8503 /* MemoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4BE6221AE6082006D8503 /* MemoDetailVC.swift */; };
 		4DB4BE6621AE6964006D8503 /* MemoListVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4BE6521AE6964006D8503 /* MemoListVO.swift */; };
+		74DBECFE63FD0DB24FD859DC /* Pods_iOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC76CFF1DE57A63040C6635 /* Pods_iOSApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,7 @@
 		4D2F4B3E21AD094F00457D9C /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		4D2F4B4021AD0CCF00457D9C /* TheaterListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListTVC.swift; sourceTree = "<group>"; };
 		4D2F4B4321AD123000457D9C /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
+		4D5318B921BA10BF008BD8E5 /* DataSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSync.swift; sourceTree = "<group>"; };
 		4D6A775E21AB86F8005FDD51 /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6A776121AB86F8005FDD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D6A776321AB86F8005FDD51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +97,9 @@
 		4DB4BE6021AE4047006D8503 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
 		4DB4BE6221AE6082006D8503 /* MemoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailVC.swift; sourceTree = "<group>"; };
 		4DB4BE6521AE6964006D8503 /* MemoListVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVO.swift; sourceTree = "<group>"; };
+		61B4A362F852435215E069BA /* Pods-iOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSApp/Pods-iOSApp.release.xcconfig"; sourceTree = "<group>"; };
+		92ACEAC6297D2DC145CB6D6D /* Pods-iOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSApp/Pods-iOSApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC76CFF1DE57A63040C6635 /* Pods_iOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DBECFE63FD0DB24FD859DC /* Pods_iOSApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,8 @@
 			children = (
 				4D6A776021AB86F8005FDD51 /* iOSApp */,
 				4D6A775F21AB86F8005FDD51 /* Products */,
+				F7C324CFF92B2A8E559FFD71 /* Pods */,
+				F08DC9FC4C7941C26C75422F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,8 +218,26 @@
 				4DB4BE6221AE6082006D8503 /* MemoDetailVC.swift */,
 				4DB4BE6521AE6964006D8503 /* MemoListVO.swift */,
 				4D0CA3CB21B4FA4500E4A4B8 /* MemoDAO.swift */,
+				4D5318B921BA10BF008BD8E5 /* DataSync.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		F08DC9FC4C7941C26C75422F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC76CFF1DE57A63040C6635 /* Pods_iOSApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7C324CFF92B2A8E559FFD71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92ACEAC6297D2DC145CB6D6D /* Pods-iOSApp.debug.xcconfig */,
+				61B4A362F852435215E069BA /* Pods-iOSApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D6A777321AB86FA005FDD51 /* Build configuration list for PBXNativeTarget "iOSApp" */;
 			buildPhases = (
+				8A89B6DA2AB65BF940DD6FAA /* [CP] Check Pods Manifest.lock */,
 				4D6A775A21AB86F8005FDD51 /* Sources */,
 				4D6A775B21AB86F8005FDD51 /* Frameworks */,
 				4D6A775C21AB86F8005FDD51 /* Resources */,
+				AEC427E0BE35AEB24BBDE456 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +327,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8A89B6DA2AB65BF940DD6FAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEC427E0BE35AEB24BBDE456 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSApp/Pods-iOSApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSApp/Pods-iOSApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D6A775A21AB86F8005FDD51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -319,6 +395,7 @@
 				4D23CBC321B1136E0002DA5F /* SWRevealViewController.m in Sources */,
 				4D23CB3D21AF74D50002DA5F /* MemoCell.swift in Sources */,
 				4D2F4B4121AD0CCF00457D9C /* TheaterListTVC.swift in Sources */,
+				4D5318BA21BA10BF008BD8E5 /* DataSync.swift in Sources */,
 				4D6A777921AB9AD2005FDD51 /* MovieListVO.swift in Sources */,
 				4D0CA3CC21B4FA4500E4A4B8 /* MemoDAO.swift in Sources */,
 				4D6A776A21AB86F8005FDD51 /* iOSApp.xcdatamodeld in Sources */,
@@ -465,6 +542,7 @@
 		};
 		4D6A777421AB86FA005FDD51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92ACEAC6297D2DC145CB6D6D /* Pods-iOSApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -485,6 +563,7 @@
 		};
 		4D6A777521AB86FA005FDD51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61B4A362F852435215E069BA /* Pods-iOSApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
